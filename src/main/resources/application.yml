@@ -1,0 +1,16 @@
+#server:
+#  port: 8081
+
+
+person:
+  name: zl
+  age: 18
+  isMan: true
+  birth: 1994/10/18
+  maps: {k1: map1,k2: map2}
+  lists:
+    -zl1
+    -zl2
+  student:
+    name: zlray
+    age: 24
