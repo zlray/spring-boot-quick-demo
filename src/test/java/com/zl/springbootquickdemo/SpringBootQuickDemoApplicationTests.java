@@ -17,11 +17,10 @@ public class SpringBootQuickDemoApplicationTests {
 
     @Autowired
     Person person;
+
     @Test
     public void contextLoads() {
         System.out.println(person);
     }
-
-
 }
 

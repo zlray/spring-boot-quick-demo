@@ -2,6 +2,7 @@ package com.zl.springbootquickdemo.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.Date;
 import java.util.List;
@@ -17,6 +18,7 @@ import java.util.Map;
 
 @Component
 @ConfigurationProperties(prefix = "person")
+@Validated //校验注解
 public class Person {
 
     private String  name;
@@ -26,6 +28,16 @@ public class Person {
     private Map<String,Object> maps;
     private List<Object> lists;
     private Student student;
+
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getName() {
         return name;
@@ -93,6 +105,7 @@ public class Person {
                 ", maps=" + maps +
                 ", lists=" + lists +
                 ", student=" + student +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
